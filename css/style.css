@@ -1,0 +1,44 @@
+html, body
+{
+	font-family: Raleway;
+	font-size: 20px;
+    background-color: white;
+    text-align: center;
+    line-height: 1.5;
+    color: #000000;
+}
+
+footer
+{
+	font-size: .5rem;
+	color: #4c4c4c;
+	position: relative;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+/* iPad */
+@media screen and (max-width: 768px){
+	html, body
+	{
+		font-size: 30px;
+		line-height: 1.5;
+	}
+}
+
+/* iphone 6 plus*/
+@media screen and (max-width: 480px){
+	html, body
+	{
+		font-size: 15px;
+	}
+}
+
+/* iphone 6 */
+@media screen and (max-width: 375px){
+	html, body
+	{
+		font-size: 15px;
+	}
+}
