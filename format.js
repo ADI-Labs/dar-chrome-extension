@@ -47,10 +47,11 @@ window.onload = function () {
     var textString = preText.innerHTML;
     var lineArray = textString.split("\n");
 
-    var newText
-    for (i = lineArray.length-1; i < lineArray.length; i--){
-        newText += lineArray[i]
+    var newText = ""
+
+    for (i = lineArray.length-1; i >= 0; i--){
+        newText += lineArray[i] + "\n"
     }
 
-    preText.innerHTML = newText
+    document.getElementsByTagName("pre")[0].innerHTML = newText;
 }

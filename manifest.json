@@ -2,7 +2,6 @@
   "name": "Degree Audit Report Helper",
   "version": "1.0",
   "description": "Reformats the Degree Audit Reports (DAR) provided by Columbia's DAR services.",
-  "default_locale": "en",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -14,5 +13,14 @@
   "permissions" : [
     "declarativeContent", "tabs", "https://ssol.columbia.edu/*"
   ],
-  "manifest_version": 2
+  "manifest_version": 2,
+
+  "content_scripts": 
+  [
+    {
+      "matches": ["*://*/*"],
+      "js": ["format.js"],
+      "run_at": "document_end"
+    }
+  ]
 }
