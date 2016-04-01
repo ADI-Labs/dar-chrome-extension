@@ -53,5 +53,338 @@ window.onload = function () {
         newText += lineArray[i] + "\n"
     }
 
-    document.getElementsByTagName("pre")[0].innerHTML = newText;
+    //Replacing <pre> area with white space
+    document.getElementsByTagName("pre")[0].innerHTML = " ";
+    
+    // Inserting html elements into content area
+	var s = '  \<center> <h1> Degree Audit </h1> </center> \
+    <section> \
+      <table class="table table-bordered"> \
+        <thead> \
+          <tr> \
+            <!-- edited bootstrap.css #2264--> \
+            <th colspan="7"> 9 ways of knowing </th> \
+          </tr> \
+          <tr> \
+            <th>Requirement</th> \
+            <th>Department</th> \
+            <th>Course Number</th> \
+            <th>Course Title</th> \
+            <th>Credit</th> \
+            <th>Grade</th> \
+            <th>Status</th> \
+          </tr> \
+        </thead> \
+        <tbody> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+        </tbody> \
+      </table> \
+    </section> \
+    <br> \
+    <section> \
+      <table class="table table-bordered"> \
+        <thead> \
+          <tr> \
+            <!-- edited bootstrap.css #2264--> \
+            <th colspan="7"> Major Requirements </th> \
+          </tr> \
+          <tr> \
+            <th>Requirement</th> \
+            <th>Department</th> \
+            <th>Course Number</th> \
+            <th>Course Title</th> \
+            <th>Credit</th> \
+            <th>Grade</th> \
+            <th>Status</th> \
+          </tr> \
+        </thead> \
+        <tbody> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+        </tbody> \
+      </table> \
+    </section> \
+ \
+    <br> \
+ \
+    <section> \
+      <table class="table table-bordered"> \
+        <thead> \
+          <tr> \
+            <!-- edited bootstrap.css #2264--> \
+            <th colspan="7"> Minor Requirements </th> \
+          </tr> \
+          <tr> \
+            <th>Requirement</th> \
+            <th>Department</th> \
+            <th>Course Number</th> \
+            <th>Course Title</th> \
+            <th>Credit</th> \
+            <th>Grade</th> \
+            <th>Status</th> \
+          </tr> \
+        </thead> \
+        <tbody> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+        </tbody> \
+      </table> \
+    </section>     \
+ \
+    <br> \
+ \
+    <section> \
+      <table class="table table-bordered"> \
+        <thead> \
+          <tr> \
+            <!-- edited bootstrap.css #2264--> \
+            <th colspan="7"> Transfer/ AP Credits </th> \
+          </tr> \
+          <tr> \
+            <th>Requirement</th> \
+            <th>Department</th> \
+            <th>Course Number</th> \
+            <th>Course Title</th> \
+            <th>Credit</th> \
+            <th>Grade</th> \
+            <th>Status</th> \
+          </tr> \
+        </thead> \
+        <tbody> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td></td> \
+          </tr> \
+        </tbody> \
+      </table> \
+    </section> \
+ \
+    <br> \
+ \
+    <section> \
+      <table class="table table-bordered"> \
+        <thead> \
+          <tr> \
+            <!-- edited bootstrap.css #2264--> \
+            <th colspan="7">List of Completed Courses</th> \
+          </tr> \
+          <tr> \
+            <th>Requirement</th> \
+            <th>Department</th> \
+            <th>Course Number</th> \
+            <th>Course Title</th> \
+            <th>Credit</th> \
+            <th>Grade</th> \
+            <th>Status</th> \
+          </tr> \
+        </thead> \
+        <tbody> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+          <tr> \
+            <td>First Year English</td> \
+            <td>ENGL</td> \
+            <td>BC1201</td> \
+            <td>Legacy of the Med.</td> \
+            <td>3</td> \
+            <td>A+</td> \
+            <td><center><img src=http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png width="20" height="20"></center></td> \
+          </tr> \
+        </tbody> \
+      </table> \
+    </section>'; // HTML string
+
+	var div = document.createElement('div');
+	div.innerHTML = s;
+
+	var replace = document.getElementById("Content");
+	replace.appendChild(div);
+
 }
