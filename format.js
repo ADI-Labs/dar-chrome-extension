@@ -189,21 +189,75 @@ window.onload = function () {
             // // var barText = document.getElementById('progress-bar-text');
             // // barText.appendChild(percentageText);
         }
-    } else {
+    } else if (schoolElements[2].charAt(14) == 'E'){
         var audit = rawText.split('_________________________________________________________________')
         var courseList = audit[13].split('\n').map(function(x){return x.trim()}).map(x => x.split("   ")).filter(x => x.length === 2)
 
         for (i = 0; i < courseList.length; i++) { 
-            var details = courseList[i][0].split(' ')
-            var semester = details[0]
-            var department = details[1]
-            var courseNumber = details[2]
-            var section = details[4]
-            var credit = details[5]
-            var grade = details[6]
-            var status = details[7]
-            var courseTitle = courseList[i][1]
+            var courseRow = document.createElement('tr');
+            var details = courseList[i][0].split(' ');
+
+            var courseTitle = courseList[i][1];
+            var courseTitleData = document.createElement('td');
+            var courseTitleText = document.createTextNode(courseTitle);
+            courseTitleData.appendChild(courseTitleText);
+            courseRow.appendChild(courseTitleData);
+            
+            var semester = details[0];
+            var semesterData = document.createElement('td');
+            var semesterText = document.createTextNode(semester);
+            semesterData.appendChild(semesterText);
+            courseRow.appendChild(semesterData);
+            
+            var department = details[1];
+            var departmentData = document.createElement('td');
+            var departmentText = document.createTextNode(department);
+            departmentData.appendChild(departmentText);
+            courseRow.appendChild(departmentData);
+
+            var courseNumber = details[2];
+            var courseNumberData = document.createElement('td');
+            var courseNumberText = document.createTextNode(courseNumber);
+            courseNumberData.appendChild(courseNumberText);
+            courseRow.appendChild(courseNumberData);
+
+            var section = details[4];
+            var sectionData = document.createElement('td');
+            var sectionText = document.createTextNode(section);
+            sectionData.appendChild(sectionText);
+            courseRow.appendChild(sectionData);
+
+            //had to skip index 5, because it's whitespace there
+
+            var credit = details[6];
+            var creditData = document.createElement('td');
+            var creditText = document.createTextNode(credit);
+            creditData.appendChild(creditText);
+            courseRow.appendChild(creditData);
+
+            var grade = details[7];
+            var gradeData = document.createElement('td');
+            var gradeText = document.createTextNode(grade);
+            gradeData.appendChild(gradeText);
+            courseRow.appendChild(gradeData);
+
+            var statusData = document.createElement('td');
+            if (grade != 'IP') {
+                var statusImg = document.createElement('img');
+                statusImg.src = "http://www.iconsdb.com/icons/preview/guacamole-green/checkmark-xxl.png";
+                statusImg.setAttribute('width','20');
+                statusImg.setAttribute('height','20');
+                statusData.appendChild(statusImg);
+            } else {
+                var statusEmpty = document.createTextNode(" ");
+                statusData.appendChild(statusEmpty);
+            }
+            courseRow.appendChild(statusData);
+
+            document.getElementById('courseTable').appendChild(courseRow);
         }
+    } else {
+        console.log("not cc or seas")
     }
 
 }
