@@ -190,8 +190,8 @@ window.onload = function () {
             // // barText.appendChild(percentageText);
         }
     } else if (schoolElements[2].charAt(14) == 'E'){
-        var audit = rawText.split('_________________________________________________________________')
-        var courseList = audit[13].split('\n').map(function(x){return x.trim()}).map(x => x.split("   ")).filter(x => x.length === 2)
+        var summary = audit[1].split('-     SUMMARY of courses which may be applied toward your      \n        degree, listed by subject area.                          \n');
+        var courseList = summary[1].split('\n').map(function(x){return x.trim()}).map(x => x.split("   ")).filter(x => x.length === 2);
 
         for (i = 0; i < courseList.length; i++) { 
             var courseRow = document.createElement('tr');
