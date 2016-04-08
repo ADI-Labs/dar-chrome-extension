@@ -1,10 +1,4 @@
-var ELEMENT = 1;
-var DOCUMENT = 9;
-var DOCUMENT_FRAGMENT = 11;
-var TEXT = 3;
-
 window.onload = function () {
-    var preText = document.getElementsByTagName("pre")[0];
     // var textString = preText.innerHTML;
     // var lineArray = textString.split("\n");
 
@@ -71,7 +65,7 @@ window.onload = function () {
   	</head> \
 	<center> <h1> Degree Audit </h1> </center> \
     <section> \
-      //List of Completed Courses \
+      <!--List of Completed Courses--> \
       <table class="table table-bordered"> \
         <thead> \
           <tr> \
@@ -93,6 +87,14 @@ window.onload = function () {
         <tbody id="courseTable"> \
         </tbody> \
       </table> \
+      \
+      <!--Progress Bar. Modified by style width-->\
+      <center> <h4> Progress Bar </h4> </center> \
+      <div class="progress table"> \
+        <div class="progress-bar progress-bar-striped active" role="progressbar" id="progressBar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" width> \
+    <span id="progress-bar-text"></span> \
+        </div> \
+      </div> \
     </section> \
     <br> \ '; // HTML string
 
@@ -102,9 +104,9 @@ window.onload = function () {
 	var replace = document.getElementById("Content");
 	replace.appendChild(div);
 
-	var audit = rawText.split(`NO     *****         SUMMARY OF DEGREE REQUIREMENTS         *****`)
-	var summary = audit[1].split('\n                                                                 \n')
-	var courseList = summary[1].split('\n').map(function(x){return x.trim()}).map(x => x.split("   ")).filter(x => x.length === 2)
+	var audit = rawText.split(`NO     *****         SUMMARY OF DEGREE REQUIREMENTS         *****`);
+	var summary = audit[1].split('\n                                                                 \n');
+	var courseList = summary[1].split('\n').map(function(x){return x.trim()}).map(x => x.split("   ")).filter(x => x.length === 2);
 
 	for (i = 0; i < courseList.length; i++) { 
         var courseRow = document.createElement('tr');
@@ -169,5 +171,19 @@ window.onload = function () {
 
         document.getElementById('courseTable').appendChild(courseRow);
 
+        //Modifying the progress bar 
+        var pointsList = summary[0].split('\n');
+        var pEarnedArray = pointsList[6].trim().split(' ');
+        var pointsEarned = parseFloat(pEarnedArray[2]);
+        var pEarningArray = pointsList[7].trim().split(' ');
+        var pointsEarning = parseFloat(pEarningArray[3]);
+        var pointsAccumulated = pointsEarned + pointsEarning;
+        var percentage = ((pointsAccumulated / 124)*100).toFixed(2);
+        percentage = percentage.toString() + '%';
+        var progressBar = document.getElementById('progressBar');
+        progressBar.setAttribute('style', 'width:' + percentage);
+        var percentageText = document.createTextNode(percentage);
+        var barText = document.getElementById('progress-bar-text');
+        barText.appendChild(percentageText);
 	}
 }
