@@ -110,11 +110,12 @@ window.onload = function () {
     if (schoolElements[2].charAt(14) == 'C') {
         var summary = audit[1].split('\n                                                                 \n');
         var courseList = summary[1].split('\n').map(function(x){return x.trim()}).map(x => x.split("   ")).filter(x => x.length === 2);
-        var fixedCourseList = courseList.filter(x=>x[0].split(' ').length===7);
+        var fixedCourseList = courseList.filter(x=>x[0].split(/\s/g).length===8)
 
-        for (i = 0; i < fixedCourseList.length; i++) { 
+        for (i = 0; i < courseList.length; i++) { 
             var courseRow = document.createElement('tr');
-            var details = courseList[i][0].split(' ');
+            var formattedCourseRow = fixedCourseList[i][0].replace(/\s+/g, ' ');
+            var details = formattedCourseRow.split(' ');
 
             var courseTitle = courseList[i][1];
             var courseTitleData = document.createElement('td');
@@ -146,15 +147,13 @@ window.onload = function () {
             sectionData.appendChild(sectionText);
             courseRow.appendChild(sectionData);
 
-            //had to skip index 5, because it's whitespace there
-
-            var credit = details[6];
+            var credit = details[5];
             var creditData = document.createElement('td');
             var creditText = document.createTextNode(credit);
             creditData.appendChild(creditText);
             courseRow.appendChild(creditData);
 
-            var grade = details[7];
+            var grade = details[6];
             var gradeData = document.createElement('td');
             var gradeText = document.createTextNode(grade);
             gradeData.appendChild(gradeText);
