@@ -104,7 +104,7 @@ window.onload = function () {
 	var replace = document.getElementById("Content");
 	replace.appendChild(div);
 
-	var audit = rawText.split(`NO     *****         SUMMARY OF DEGREE REQUIREMENTS         *****`);
+	var audit = rawText.split(`     *****         SUMMARY OF DEGREE REQUIREMENTS         *****`);
     var schoolCode = audit[0].split('_________________________________________________________________')
     var schoolElements = schoolCode[0].split('\n')
     if (schoolElements[2].charAt(14) == 'C') {
@@ -190,7 +190,7 @@ window.onload = function () {
             // // barText.appendChild(percentageText);
         }
     } else if (schoolElements[2].charAt(14) == 'E'){
-        var summary = audit[1].split('-     SUMMARY of courses which may be applied toward your      \n        degree, listed by subject area.                          \n');
+        var summary = audit[1].split('     SUMMARY of courses which may be applied toward your      \n        degree, listed by subject area.                          \n');
         var courseList = summary[1].split('\n').map(function(x){return x.trim()}).map(x => x.split("   ")).filter(x => x.length === 2);
         var fixedCourseList = courseList.filter(x=>x[0].split(' ').length===7);
 
