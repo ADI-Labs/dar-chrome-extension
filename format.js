@@ -110,8 +110,9 @@ window.onload = function () {
     if (schoolElements[2].charAt(14) == 'C') {
         var summary = audit[1].split('\n                                                                 \n');
         var courseList = summary[1].split('\n').map(function(x){return x.trim()}).map(x => x.split("   ")).filter(x => x.length === 2);
+        var fixedCourseList = courseList.filter(x=>x[0].split(' ').length===7);
 
-        for (i = 0; i < courseList.length; i++) { 
+        for (i = 0; i < fixedCourseList.length; i++) { 
             var courseRow = document.createElement('tr');
             var details = courseList[i][0].split(' ');
 
