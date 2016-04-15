@@ -1,16 +1,30 @@
 html, body
 {
 	font-family: Raleway;
-	font-size: 20px;
-    background-color: white;
-    text-align: center;
-    line-height: 1.5;
-    color: #000000;
+    background-color: #B0E0E0;
+}
+
+.table
+{
+  width: 95%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+.table-bordered th
+{
+	text-align: center;
+}
+.table-bordered th,
+.table-bordered td
+{
+	background-color: #FFF;
 }
 
 footer
 {
-	font-size: .5rem;
+	font-size: 1rem;
 	color: #4c4c4c;
 	position: relative;
 	margin-top: 1rem;
@@ -22,8 +36,6 @@ footer
 @media screen and (max-width: 768px){
 	html, body
 	{
-		font-size: 30px;
-		line-height: 1.5;
 	}
 }
 
@@ -31,7 +43,6 @@ footer
 @media screen and (max-width: 480px){
 	html, body
 	{
-		font-size: 15px;
 	}
 }
 
@@ -39,6 +50,5 @@ footer
 @media screen and (max-width: 375px){
 	html, body
 	{
-		font-size: 15px;
 	}
 }
